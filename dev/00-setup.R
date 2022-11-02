@@ -9,3 +9,5 @@ renv::status()
 
 usethis::use_description()
 usethis::use_testthat()
+
+usethis::use_build_ignore(c("output", "dev"))
