@@ -5,3 +5,6 @@ pkgs <- c(
 install.packages(pkgs)
 renv::status()
 # renv::snapshot()
+
+
+usethis::use_description()
