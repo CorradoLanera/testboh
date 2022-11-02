@@ -8,3 +8,4 @@ renv::status()
 
 
 usethis::use_description()
+usethis::use_testthat()
