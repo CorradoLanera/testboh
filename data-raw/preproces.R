@@ -8,12 +8,10 @@ here("R") |>
 
 
 
-
 db_raw <- here("data-raw/my_data.csv") |>
   read_csv()
 
-
-db <- db_raw |>
+testboh <- db_raw |>
   mutate(
     tot = a + b + c,
     num_string = "1",
@@ -22,16 +20,6 @@ db <- db_raw |>
     ten_tot = ten_me(tot)
   )
 
-plot_res <- ggplot(db, aes(a, tot)) +
-  geom_point() +
-  labs(
-    title = "A super cool an unuseful plot",
-    x = "column A",
-    y = "computed TOT"
-  )
-plot_res
 
-
-
-here("output/cool_plot.png") |>
-  ggsave(plot_res)
+# usethis::use_data(testboh)
+write_rds(testboh, here("data/testboh.rds"))
